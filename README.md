@@ -12,6 +12,7 @@ This repo is aligned to **Quickstart: LangSmith Essentials** and demonstrates th
 - Running experiments
 - Capturing feedback
 - Producing monitoring summaries
+- Fleet-style agent orchestration with traced sub-agents
 - CI checks for quality gates
 
 ## Architecture
@@ -24,6 +25,14 @@ User Input
   -> Experiment Evaluators
   -> Feedback Records
   -> Monitoring Summary
+
+Campaign Input
+  -> Fleet Meta Ads Agent
+  -> Cost Monitor Sub-Agent
+  -> Quality Monitor Sub-Agent
+  -> Safety Guardrail Sub-Agent
+  -> Decision Engine Sub-Agent
+  -> LangSmith Nested Trace
 ```
 
 The demo agent is deterministic and API-free. LangSmith sync/experiment scripts require a LangSmith API key in local `.env`.
@@ -44,6 +53,14 @@ Add your LangSmith key only to local `.env`.
 ```bash
 python -m observability.cli
 ```
+
+## Run Fleet-Style Agent Demo
+
+```bash
+python -m observability.run_fleet_agent
+```
+
+This creates a LangSmith parent trace named `fleet_meta_ads_agent` with child traces for cost, quality, safety, and decision sub-agents.
 
 ## Run Checks
 
@@ -67,4 +84,5 @@ python -m observability.run_experiment
 - [Module 3 - Experiments](docs/module-3-experiments.md)
 - [Module 4 - Feedback](docs/module-4-feedback.md)
 - [Module 5 - Monitoring](docs/module-5-monitoring.md)
+- [Quickstart - LangSmith Fleet](docs/fleet-quickstart.md)
 - [Capstone](docs/capstone.md)
