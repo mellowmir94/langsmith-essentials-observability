@@ -1,0 +1,20 @@
+[
+  {
+    "case_id": "cost_monitoring",
+    "user_input": "How should I monitor cost and token usage for an agent?",
+    "expected_category": "cost",
+    "required_terms": ["cost", "token", "budget"]
+  },
+  {
+    "case_id": "security_monitoring",
+    "user_input": "How do I monitor agent security and prevent secret leaks?",
+    "expected_category": "security",
+    "required_terms": ["security", "secret", "unsafe"]
+  },
+  {
+    "case_id": "quality_evaluation",
+    "user_input": "How do I evaluate agent response quality?",
+    "expected_category": "quality",
+    "required_terms": ["quality", "evaluations", "dataset"]
+  }
+]

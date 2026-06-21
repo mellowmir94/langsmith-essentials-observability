@@ -1,0 +1,16 @@
+[project]
+name = "langsmith-essentials-observability"
+version = "0.1.0"
+description = "LangSmith observability and evaluation project for tracing, debugging, datasets, experiments, feedback, and production monitoring of AI agents."
+requires-python = ">=3.11"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
